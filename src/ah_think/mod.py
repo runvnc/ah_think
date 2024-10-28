@@ -22,7 +22,7 @@ async def think(extensive_chain_of_thoughts="", context=None):
 
     Example (outline):
 
-    [ { "think": { "extensive_chain_of_thoughts": "[Line 1]\n[Line 2]\n ..." } ]
+    { "think": { "extensive_chain_of_thoughts": "[Line 1]\n[Line 2]\n ..." }
 
     Think through the ENTIRE problem and compose and analyze your planned commands
     until you are satisfied that you have correctly finished.
