@@ -48,8 +48,28 @@ async def think(extensive_chain_of_thoughts="", context=None):
 
     The output commands after this should use work you have already prepared and considered carefully in this think() command.
 
-    Always include other commands in the command array after this one, as the system does not return a result
-    and task processing will stop if you do not add another command after think()!
+    Always include other commands in the command array after this one.
  
     """
+    return True
+
+
+@command()
+async def task_complete(context=None):
+    """
+    Indicate that the task or your conversation turn is complete.
+    Unless there is an error, the system will not return the results of any commands,
+    and will hand control back to the system or user.
+
+    Important: do not use this unless you have already WAITED FOR and received the results of any
+    previous command list you issued (unless you only used rhetorical commands like say() or think() )
+
+    Parameters:
+    None
+
+    Example:
+    { "task_complete": {} }
+
+    """
+    context.data['finished_conversation'] = True
     return None
