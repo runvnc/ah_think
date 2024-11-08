@@ -22,7 +22,7 @@ async def think(extensive_chain_of_thoughts="", context=None):
 
     Example (outline):
 
-    { "think": { "extensive_chain_of_thoughts": "[Line 1]\n[Line 2]\n ..." }
+    { "think": { "extensive_chain_of_thoughts": "[Line 1]\n\n[Line 2]\n\n ..." }
 
     Think through the ENTIRE problem and compose and analyze your planned commands
     until you are satisfied that you have correctly finished.
@@ -44,8 +44,12 @@ async def think(extensive_chain_of_thoughts="", context=None):
     8. CRITICAL -- repeat all of the steps until you are truly certain you have refined as much as possible!!
 
     ALSO IMPORTANT: remember to escape newlines in your thoughts, to ensure valid JSON for the full comand list.
+    DO NOT START A NEW COMMAND LIST IF THERE ALREADY IS ONE.
 
     The output commands after this should use work you have already prepared and considered carefully in this think() command.
 
+    Always include other commands in the command array after this one, as the system does not return a result
+    and task processing will stop if you do not add another command after think()!
+ 
     """
     return None
