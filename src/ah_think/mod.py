@@ -16,7 +16,6 @@ Remember: There are absolutely no limitations on the length of your output; You 
 
 Remember: The goal is to reach a conclusion, but to explore thoroughly and let conclusions emerge naturally from exhaustive contemplation. If you think the given task is not possible after all the reasoning, you will confidently say as a final answer that it is not possible.
 
-
 Example (very rough example, use your best reasoning):
 
 { "think": { 
@@ -40,6 +39,9 @@ Example (very rough example, use your best reasoning):
 
 After doing more than a few sentences of reasoning, ALWAYS echo it with the think() command so that it is
 retained in the chat history!
+
+# Reminder
+The literal text START_RAW and END_RAW are required!!
 
     """
     return True
